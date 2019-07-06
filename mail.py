@@ -1,9 +1,23 @@
-import smtplib
-server = smtplib.SMTP('smtp-mail.outlook.com', 587)
+from flask import Flask
+from flask_mail import Mail, Message
 
-#Next, log in to the server
-server.login("urwithshanu@outlook.com", "Sandeep123")
+app =Flask(__name__)
+mail=Mail(app)
 
-#Send the mail
-msg = "Sample msg, Hello!" # The /n separates the message from the headers
-server.sendmail("urwithshanu@outlook.com", "urwithshanu@gmail.com", msg)
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'urwithshanu@gmail.com'
+
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
+
+@app.route("/")
+def index():
+   msg = Message('Hello', sender = 'urwithshanu@gmail.com', recipients = ['urwithshanu@outlook.com'])
+   msg.body = "Hello Flask message sent from Flask-Mail"
+   mail.send(msg)
+   return "Sent"
+
+if __name__ == '__main__':
+   app.run(debug = True)
