@@ -1,0 +1,351 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body> 
+<style>
+  form.form-horizontal { 
+    margin: 10 auto; 
+    width:400px;
+    letter-spacing: 0.08em;
+    line-height: 140%;
+    color:white;
+     }
+   body{
+     background: blue;
+   }  
+</style> 
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>SITE SURVEY FORM</legend>
+
+<!-- Multiple Checkboxes (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">Project/School Name:</label>
+  <div class="col-md-4">
+    <label class="checkbox-inline" for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+      Government school
+    </label>
+    <label class="checkbox-inline" for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+      Private school
+    </label>
+    <label class="checkbox-inline" for="checkboxes-2">
+      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+      Public space
+    </label>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Googlemapslocation">Google Maps location:</label>
+  <div class="col-md-4">
+    <button id="Googlemapslocation" name="Googlemapslocation" class="btn btn-primary">Select</button>
+  </div>
+</div>
+
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Address">Address</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="Address" name="Address"></textarea>
+  </div>
+</div>
+
+<!-- Prepended text-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="AgeGroup">Age group:</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">From</span>
+      <input id="AgeGroup" name="AgeGroup" class="form-control" placeholder="" type="text" required="">
+    </div>
+    
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Number of Students">Number of Students :</label>  
+  <div class="col-md-4">
+  <input id="Number of Students" name="Number of Students" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Prepended text-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="AgeGroup"></label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">To</span>
+      <input id="AgeGroup" name="AgeGroup" class="form-control" placeholder="" type="text" required="">
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Site Area :</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="textarea" name="textarea"></textarea>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="snakeprone">Is the site Snake Prone?</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="snakeprone-0">
+      <input type="radio" name="snakeprone" id="snakeprone-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="snakeprone-1">
+      <input type="radio" name="snakeprone" id="snakeprone-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Is the site open to public?</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="vandalism">Is the ground prone to vandalism?</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="vandalism-0">
+      <input type="radio" name="vandalism" id="vandalism-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="vandalism-1">
+      <input type="radio" name="vandalism" id="vandalism-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="soil">Soil Condition</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="soil-0">
+      <input type="radio" name="soil" id="soil-0" value="1" checked="checked">
+      Hardy &amp; rocky
+    </label> 
+    <label class="radio-inline" for="soil-1">
+      <input type="radio" name="soil" id="soil-1" value="2">
+      Soft
+    </label> 
+    <label class="radio-inline" for="soil-2">
+      <input type="radio" name="soil" id="soil-2" value="3">
+      Muddy &amp; Wet
+    </label> 
+    <label class="radio-inline" for="soil-3">
+      <input type="radio" name="soil" id="soil-3" value="4">
+      Sandy &amp; loose
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="elements">1.Play elements on site</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="elements-0">
+      <input type="radio" name="elements" id="elements-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="elements-1">
+      <input type="radio" name="elements" id="elements-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="wires">2.Underground wires/pipes/tanks</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="wires-0">
+      <input type="radio" name="wires" id="wires-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="wires-1">
+      <input type="radio" name="wires" id="wires-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="poles">3.Electric Poles/lamp posts</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="poles-0">
+      <input type="radio" name="poles" id="poles-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="poles-1">
+      <input type="radio" name="poles" id="poles-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="trees">4.Trees and Plants</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="trees-0">
+      <input type="radio" name="trees" id="trees-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="trees-1">
+      <input type="radio" name="trees" id="trees-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="boulder">5.Boulder or Rocks</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="boulder-0">
+      <input type="radio" name="boulder" id="boulder-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="boulder-1">
+      <input type="radio" name="boulder" id="boulder-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="water">6.Water Logging</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="water-0">
+      <input type="radio" name="water" id="water-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="water-1">
+      <input type="radio" name="water" id="water-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="water">Water Bodies Nearby</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="water-0">
+      <input type="radio" name="water" id="water-0" value="1" checked="checked">
+      Sea/Beach
+    </label> 
+    <label class="radio-inline" for="water-1">
+      <input type="radio" name="water" id="water-1" value="2">
+      River/Stream
+    </label> 
+    <label class="radio-inline" for="water-2">
+      <input type="radio" name="water" id="water-2" value="3">
+      Lake/Pond
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="highway">Any major highways or traffic roads nearby</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="highway-0">
+      <input type="radio" name="highway" id="highway-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="highway-1">
+      <input type="radio" name="highway" id="highway-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cater">Should the playground cater to children with disability?</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="cater-0">
+      <input type="radio" name="cater" id="cater-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="cater-1">
+      <input type="radio" name="cater" id="cater-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="anthill">Do you need any Anthill to maintain the playground?</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="anthill-0">
+      <input type="radio" name="anthill" id="anthill-0" value="1" checked="checked">
+      Yes
+    </label> 
+    <label class="radio-inline" for="anthill-1">
+      <input type="radio" name="anthill" id="anthill-1" value="2">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Any particular activity/equipment needed</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="textarea" name="textarea"></textarea>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="routine">Please mention any activity/routine of the teachers and children related to the playground</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="routine" name="routine"></textarea>
+  </div>
+</div>
+
+
+
+
+</fieldset>
+</form>
+</body>
+</html>
