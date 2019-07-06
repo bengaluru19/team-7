@@ -1,0 +1,32 @@
+html{
+	margin-top:25px;
+	padding: 0;
+	height: 100%;	
+}
+body{
+	text-align: center;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#jumbotron-div{
+	margin-top: 30px;
+	height: 100%;
+}
+
+.textbox{
+	border-radius: 20px;
+	background-color: rgba(0,0,0,0.075);
+	border: 3px solid black;
+	text-align: center;
+	width: 250px;
+}
+
+#image1{
+	border-radius: 50%;
+	height:  300px;
+	z-index: -10;
+
+}
