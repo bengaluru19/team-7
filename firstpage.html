@@ -5,13 +5,61 @@
 		<title>First page.</title>
 		<meta charset="utf-8">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/firstpage.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
 		<style type="text/css">
 			#user-button1 , #user-button2 {
 			display:inline-block;
 			}
+
+			body{
+	margin: 0;
+	padding: 0;
+	
+}
+
+#jumbotron-div{
+	margin-top:7%;
+	background-color: transparent;
+
+}
+
+#total-firstpage{
+	text-align: center;
+}
+
+.btn-firstpage{
+	margin-top: 0.5%;
+	width: 150px;
+	background-color:  transparent;
+}
+
+
+
+#user-button{
+	border: 2px solid #2E64FE;
+}
+
+.video-container {
+  position: absolute;
+  z-index: -1000;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+.video-container video {
+  min-width: 100%; 
+  min-height: 100%; 
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 		</style>
 
 		<script type="text/javascript" language="JavaScript">
@@ -21,7 +69,7 @@
 	            	}
 	            	function clickedButton2()
 	            	{
-	               	 window.location = 'client_login_reg.html'
+	               	 window.location = 'client_login.html'
 	            	}
         </script>
 	</head>
@@ -30,7 +78,7 @@
 		<div id= "total-firstpage">
 
 			<div class = "video-container">
-				<video id="video-background-element" preload="auto" loop="loop" muted="muted" autoplay="autoplay" style=" opacity: 0.3">
+				<video id="video-background-element" preload="auto" loop="loop" muted="muted" autoplay="autoplay" style=" opacity: 0.2">
 					<source src="video/anthill.mp4" type="video/mp4">
 						Video not supported.
 				</video>
@@ -42,8 +90,8 @@
 			  <p class="lead" style="color: black; font-size: 24px" >Children see magic because they look for it.</p>
 			  <hr class="my-4" style="width: 60%;color: black;  " >
 			  <div class="btn-group btn-group-justified">
-			  	<p class="lead"><a class="btn btn-primary btn-lg btn-firstpage" href="#" role="button" id="user-button1" onClick = "clickedButton1()" style="margin-right: 40px; width: 200px; border: 2px solid #3333ff">Admin</a></p>
-			  	<p class="lead"><a class="btn btn-primary btn-lg btn-firstpage" href="#" role="button" id="user-button2" onClick = "clickedButton2()" style="width: 200px; border: 2px solid #3333f0">Client</a></p>
+			  	<p class="lead"><a class="btn btn-primary btn-lg btn-firstpage" href="#" role="button" id="user-button1" onClick = "clickedButton1()" style="margin-right: 40px; width: 200px; border: 2px solid #3333ff; color: black">Admin</a></p>
+			  	<p class="lead"><a class="btn btn-primary btn-lg btn-firstpage" href="#" role="button" id="user-button2" onClick = "clickedButton2()" style="width: 200px; border: 2px solid #3333f0; color: black">Client</a></p>
 			  </div>
 			</div>
 		</div>
