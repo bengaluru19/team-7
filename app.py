@@ -12,7 +12,7 @@ import pandas as pd
 import datetime
 
 app = Flask(__name__)
-app._static_folder = 'templates/css'
+#app._static_folder = '/s'
 csrf = CSRFProtect()
 csrf = CSRFProtect(app)
 
@@ -79,7 +79,8 @@ def adlogin():
             else:
                 # FLASH MESSAGE
                 flash("Passwords do not match", "danger")
-    return redirect("/adlogin")
+                return redirect("/adlogin")
+        return redirect("/adlogin")
 
 
 # CLIENT LOGIN
@@ -140,7 +141,7 @@ def csignup():
             resultSet2 = curr.execute(
                 "INSERT INTO client(username,email,password,name,phone) VALUES ('"+user+"','"+email+"','"+password+"','"+name+"','"+phone+"')")
             mysql.connection.commit()
-            return redirect("/clogin")
+            return redirect("/home")
 
 
 # REG CNFRM
@@ -238,6 +239,21 @@ def logout():
 
 
 # Functions
+
+def maintenanceDetails():
+    curr = mysql.connection.cursor()
+    resultSet = curr.execute(
+        "SELECT client.email, survey.addr FROM project LEFT JOIN client ON project.client_username=client.username && project.pdate>" + datetime.datetime.now().strftime("%Y-%m-" + "%" + "d") + " LEFT JOIN survey ON project.survey_id=survey.survey_id")
+    ip = mycursor.fetchall()
+    resultSet = curr.execute("SELECT email FROM admin")
+    email = mycursor.fetchone()[0]
+    for i in ip:
+        msg = Message("Maintenance Due",
+                      sender=sender_email, recipients=[email])
+        msg.body = "The maintenance is due for user: " + ip[0]
+        msg.body = msg.body + " at area: " + ip[1]
+        mail.send(msg)
+
 
 def pending():
     curr = mysql.connection.cursor()

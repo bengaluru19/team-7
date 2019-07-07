@@ -5,7 +5,8 @@
 		<title>First page.</title>
 		<meta charset="utf-8">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="templates\bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='css/bootstrap.min.css') }}">
+		
 
 		<style type="text/css">
 			#user-button1 , #user-button2 {
@@ -69,7 +70,7 @@
 	            	}
 	            	function clickedButton2()
 	            	{
-	               	 window.location = '/clogin'
+	               	 window.location = '/csignup'
 	            	}
         </script>
 	</head>
@@ -79,7 +80,7 @@
 
 			<div class = "video-container">
 				<video id="video-background-element" preload="auto" loop="loop" muted="muted" autoplay="autoplay" style=" opacity: 0.2">
-					<source src="antHill\templates\admin_login.html" type="video/mp4">
+					<source src="{{ url_for('static', filename='video/anthill.mp4') }}" type="video/mp4">
 						Video not supported.
 				</video>
 			</div>
