@@ -17,9 +17,19 @@
   <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+
+  
 </head>
 
 <body class="">
+
+  <script type="text/javascript">
+    function onCompleteClick(){
+        
+  document.getElementById("table1").deleteRow(0);
+    }
+  </script>
+
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <!--
@@ -34,21 +44,19 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <div class="sidebar-wrapper">
-        <ul class="nav">
           <li class="nav-item  ">
             <a class="nav-link" href="./dashboard.html">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active ">
+          <li class="nav-item ">
             <a class="nav-link" href="./user.html">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active ">
             <a class="nav-link" href="./tables.html">
               <i class="material-icons">content_paste</i>
               <p>Table List</p>
@@ -60,7 +68,36 @@
               <p>Add Design</p>
             </a>
           </li>
-        
+          <!--<li class="nav-item ">
+            <a class="nav-link" href="./icons.html">
+              <i class="material-icons">bubble_chart</i>
+              <p>Icons</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./map.html">
+              <i class="material-icons">location_ons</ie
+              <p>Maps</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./notifications.html">
+              <i class="material-icons">notifications</i>
+              <p>Notifications</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./rtl.html">
+              <i class="material-icons">language</i>
+              <p>RTL Support</p>
+            </a>
+          </li>
+          <li class="nav-item active-pro ">
+            <a class="nav-link" href="./upgrade.html">
+              <i class="material-icons">unarchive</i>
+              <p>Upgrade to PRO</p>
+            </a>
+          </li>-->
         </ul>
       </div>
     </div>
@@ -69,7 +106,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Table List</a>
+            <a class="navbar-brand" href="#pablo">Task List</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -135,12 +172,12 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Simple Table</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
+                  <h4 class="card-title ">Pending Tasks</h4>
+                  <p class="card-category"> Here is a list of Pending tasks</p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table">
+                    <table class="table" id="table1">
                       <thead class=" text-primary">
                         <th>
                           ID
@@ -149,14 +186,14 @@
                           Name
                         </th>
                         <th>
-                          Country
+                          Type
                         </th>
                         <th>
-                          City
-                        </th>
+                          Location
                         <th>
-                          Salary
+
                         </th>
+              
                       </thead>
                       <tbody>
                         <tr>
@@ -164,101 +201,52 @@
                             1
                           </td>
                           <td>
-                            Dakota Rice
+                            Ram 
                           </td>
                           <td>
-                            Niger
+                            Private School
                           </td>
                           <td>
-                            Oud-Turnhout
+                            Bangalore
                           </td>
-                          <td class="text-primary">
-                            $36,738
+                          <td >
+                            <a class="btn btn-primary btn-round" href="#pablo" name="complete" id = "completebutton1">Complete<div class="ripple-container" onclick="onCompleteClick()"></div></a>
                           </td>
+                        
                         </tr>
                         <tr>
                           <td>
                             2
                           </td>
                           <td>
-                            Minerva Hooper
+                            Shyam
                           </td>
                           <td>
-                            Curaçao
+                            Government School
                           </td>
                           <td>
-                            Sinaai-Waas
+                            Chennai
                           </td>
-                          <td class="text-primary">
-                            $23,789
+                          <td>
+                            <a class="btn btn-primary btn-round" href="#pablo" name="complete" id = "completebutton2">Complete<div class="ripple-container"></div></a>
                           </td>
+                      
                         </tr>
                         <tr>
                           <td>
                             3
                           </td>
                           <td>
-                            Sage Rodriguez
+                            Rahul
                           </td>
                           <td>
-                            Netherlands
+                            Public School
                           </td>
                           <td>
-                            Baileux
-                          </td>
-                          <td class="text-primary">
-                            $56,142
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
+                            Mysore
                           </td>
                           <td>
-                            Philip Chaney
-                          </td>
-                          <td>
-                            Korea, South
-                          </td>
-                          <td>
-                            Overland Park
-                          </td>
-                          <td class="text-primary">
-                            $38,735
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Doris Greene
-                          </td>
-                          <td>
-                            Malawi
-                          </td>
-                          <td>
-                            Feldkirchen in Kärnten
-                          </td>
-                          <td class="text-primary">
-                            $63,542
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            Mason Porter
-                          </td>
-                          <td>
-                            Chile
-                          </td>
-                          <td>
-                            Gloucester
-                          </td>
-                          <td class="text-primary">
-                            $78,615
+                            <a class="btn btn-primary btn-round" href="#pablo" name="complete" id = "completebutton3">Complete<div class="ripple-container"></div></a>
                           </td>
                         </tr>
                       </tbody>
@@ -267,11 +255,14 @@
                 </div>
               </div>
             </div>
+
+            <a class="btn btn-primary btn-round" href="#pablo" name="complete" id = "completebutton4">Complete<div class="ripple-container" onclick="onCompleteClick()"></div></a>
+
             <div class="col-md-12">
               <div class="card card-plain">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title mt-0"> Table on Plain Background</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
+                <!--<div class="card-header card-header-primary">
+                  <h4 class="card-title mt-0"> Completed Tasks</h4>
+                  <p class="card-category"> Here is a list of completed tasks</p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -402,7 +393,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
       <footer class="footer">
